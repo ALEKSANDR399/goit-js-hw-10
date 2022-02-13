@@ -27,15 +27,13 @@ function addInputToFetch(e) {
     }
     if (data.length === 1) {
       countriesList.innerHTML = '';
-      return infoAboutCountry.insertAdjacentHTML('afterbegin', countryCardInfo(data));
+      return (infoAboutCountry.innerHTML = countryCardInfo(data));
       // paramsForCountry(data);
     }
     if (data.length >= 2 && data.length <= 10) {
       infoAboutCountry.innerHTML = '';
       countriesList.insertAdjacentHTML('beforeend', countriesCards(data));
       // paramsCountry(data);
-    } else {
-      infoAboutCountry.innerHTML = '';
     }
   });
 }
